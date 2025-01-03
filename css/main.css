@@ -1,0 +1,213 @@
+@import url(reset.css);
+@import url(media.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@font-face {
+    font-family: Archangel;
+    src: url(../fonts/ofont.ru_Archangelsk.ttf);
+    font-weight: 400;
+}
+:root {
+    --light-col: #FFF;
+    --dark-col: #000;
+    --yellow-col: #F8F200;
+    --blue-col: #52BEDC;
+}
+body {
+    font-family: Roboto, Archangel, sans-serif;
+    background-color: var(--dark-col);
+    text-align: center;
+}
+.container {
+    text-align: center;
+    max-width: 1920px; 
+    width: 100%;
+    margin: 0 auto;
+}
+.header,
+.main,
+.footer {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.text-with-icons {
+    display: grid;
+    row-gap: 17px;
+}
+.twi-el {
+    display: flex;
+    column-gap: 10px;
+}
+.button {
+    font-family: Roboto, sans-serif;
+    background-color: var(--dark-col);
+    color: var(--yellow-col);
+    font-weight: 700;
+    font-size: 18px;
+    padding: 19px 50px;
+}
+.button:hover {
+    cursor: default;
+}
+span {
+    color: var(--blue-col);
+    font-weight: 700;
+}
+h1 {
+    font-family: Archangel, serif;
+    font-size: 62px;
+    color: var(--dark-col);
+}
+h4 {
+    font-family: Roboto, sans-serif;
+    color: var(--blue-col);
+    font-weight: 700;
+    font-size: 24px;
+}
+p {
+    font-family: Roboto, serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 2;
+}
+/* Header */
+.header {
+    position: relative;
+    background-image: url(../img/screens/main_bg1.jpg);
+    padding: 20px 16.6% 0;
+    height: 1000px;
+}
+.header-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 537px;
+}
+.header-nav-list {
+    justify-content: space-between;
+    align-items: start;
+    display: flex;
+    column-gap: 40px;
+    margin: 15px 0;
+
+}
+.header-content {
+    position: absolute;
+    background-color: var(--yellow-col);
+    text-align: left;
+
+    width: 625px;
+    height: 370px;
+    padding: 70px;
+    bottom: 0;
+    right: 16.6%;
+    /* clip-path: polygon(0 0, 100% 0, 0 100%, 100% 100%, 0 100%, 100% 0); */
+
+    h1 {
+        margin-bottom: 25px;
+    }
+}
+.header-button {
+    padding: 19px 50px;
+    color: var(--yellow-col);
+    font-size: 22px;
+    font-family: Roboto, serif;
+    background-color: var(--dark-col);
+}
+
+/* About */
+.about {
+    background-color: white;
+    padding: 70px 0 70px 16.6%;
+    height: 850px;
+}
+about-content {
+    text-align: left;
+}
+.about-text {
+    text-align: left;
+    width: 1000px;
+    margin-bottom: 70px;
+    h1 {
+        margin-bottom: 25px;
+    }
+    p {
+        color: #717171;
+    }
+}
+.about-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+    text-align: left;
+}
+.about-img {
+    overflow: hidden;
+    flex: 1 1 300px;
+    /* max-width: 400px; */
+}
+.about-img-1 {
+    /* align-self: start; */
+}
+.about-img-2 {
+    /* align-self: end; */
+}
+.about-img-3 {
+}
+
+/* PLAY AND WIN */
+.play-and-win {
+    height: 880px;
+}
+.paw-text {
+    p{
+        color: var(--light-col);
+    }
+}
+
+/* HP */
+.hp {
+    background-color: var(--yellow-col);
+    display: flex;
+    height: 675px;
+}
+.hp-text {
+    text-align: left;
+}
+
+/* PLAY ON */
+.play-on {
+    display: flex;
+    h1 {
+        color: var(--light-col);
+    }
+}
+.disks-bg {
+    margin-right: 32px;
+}
+.play-on-content {
+    text-align: left;
+    margin: 70px 0;
+    .text-with-icons {
+        p {
+            color: var(--light-col);
+        }
+    }
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 15px 16.6%;
+
+    background-color: var(--light-col);
+    justify-content: space-between;
+}
+.footer-logos {
+    column-gap: 32px;
+}
+.footer-and-some-text {
+    display: flex;
+    column-gap: 32px;
+}
