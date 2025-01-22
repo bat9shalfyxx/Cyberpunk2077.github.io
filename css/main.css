@@ -7,8 +7,11 @@
     font-weight: 400;
 }
 :root {
+    --padding-inline: 16.6%;
+    --padding-block: 70px;
     --light-col: #FFF;
     --dark-col: #000;
+    --gray-col: #777777;
     --yellow-col: #F8F200;
     --blue-col: #52BEDC;
 }
@@ -33,6 +36,9 @@ body {
 .text-with-icons {
     display: grid;
     row-gap: 17px;
+    li {
+        align-items: center;
+    }
 }
 .twi-el {
     display: flex;
@@ -44,10 +50,27 @@ body {
     color: var(--yellow-col);
     font-weight: 700;
     font-size: 18px;
-    padding: 19px 50px;
+    padding: 19px 50px;    
+    transition: background-color 0.4s, top 0.4s ease;
 }
+.button.rev-col-button {
+    background-color: var(--yellow-col) !important;
+    color: var(--dark-col) !important;
+}
+
 .button:hover {
-    cursor: default;
+    background-color: color-mix(in srgb, var(--dark-col) 90%, var(--light-col));
+}
+.button.rev-col-button:hover {
+    background-color: color-mix(in srgb, var(--yellow-col) 80%, var(--dark-col)) !important;
+}
+.button:active {
+    position: relative;
+    background-color: color-mix(in srgb, var(--dark-col) 80%, var(--light-col));
+    top: 2px;
+}
+.button.rev-col-button:active {
+    background-color: color-mix(in srgb, var(--yellow-col) 70%, var(--dark-col)) !important;
 }
 span {
     color: var(--blue-col);
@@ -74,20 +97,20 @@ p {
 .header {
     position: relative;
     background-image: url(../img/screens/main_bg1.jpg);
-    padding: 20px 16.6% 0;
+    padding: 20px var(--padding-inline) 0;
     height: 1000px;
 }
 .header-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 537px;
 }
 .header-nav-list {
-    justify-content: space-between;
-    align-items: start;
+    align-items: start; 
     display: flex;
     column-gap: 40px;
-    margin: 15px 0;
+    margin: 15px 0; 
 
 }
 .header-content {
@@ -99,7 +122,7 @@ p {
     height: 370px;
     padding: 70px;
     bottom: 0;
-    right: 16.6%;
+    right: var(--padding-inline);
     /* clip-path: polygon(0 0, 100% 0, 0 100%, 100% 100%, 0 100%, 100% 0); */
 
     h1 {
@@ -113,12 +136,11 @@ p {
     font-family: Roboto, serif;
     background-color: var(--dark-col);
 }
-
 /* About */
 .about {
     background-color: white;
-    padding: 70px 0 70px 16.6%;
-    height: 850px;
+    padding: var(--padding-block) var(--padding-inline);
+    /* height: 850px; */
 }
 about-content {
     text-align: left;
@@ -131,50 +153,122 @@ about-content {
         margin-bottom: 25px;
     }
     p {
-        color: #717171;
+        width: 952px;
+        color: var(--gray-col)
     }
 }
 .about-img-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     gap: 32px;
     text-align: left;
 }
-.about-img {
-    overflow: hidden;
-    flex: 1 1 300px;
-    /* max-width: 400px; */
-}
-.about-img-1 {
-    /* align-self: start; */
-}
-.about-img-2 {
-    /* align-self: end; */
-}
-.about-img-3 {
+.about-small-img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 
 /* PLAY AND WIN */
 .play-and-win {
-    height: 880px;
+    position: relative;
+    padding: 15px var(--padding-inline) var(--padding-block);
 }
 .paw-text {
+    text-align: left;
+    max-width: 952px;
     p{
         color: var(--light-col);
     }
+    h1 {
+        color: var(--light-col);
+    }
 }
-
+.paw-text-fr {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    img {
+        margin-right: 32px;
+    }
+    h1 {
+        margin-top: 29px;
+    }
+}
+.paw-content {
+    display: flex;
+}
+.paw-form {
+    border: 2px solid var(--blue-col);
+    width: 480px;
+    height: 383px;
+    margin-right: 32px;
+    margin-top: 98px;
+    display: grid;
+    
+    .button {
+        width: 192px;
+        height: 59px;
+        
+    }
+    .filetaker {
+        background-color: transparent;
+    }
+}
+.consoles {
+    position: relative;
+    margin-top: 25px;
+    width: 790px;
+}
+.z_yellow {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+.Xbox {
+    position: absolute;
+    margin-top: 25px;
+    left: 164px;
+}
+.z_blue {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+.playstation {
+    position: absolute;
+    margin-top: 25px;
+    right: 0;
+}
 /* HP */
 .hp {
     background-color: var(--yellow-col);
     display: flex;
-    height: 675px;
+    padding: var(--padding-block) var(--padding-inline);
+    min-height: 675px;
+}   
+.hp-content {
+    display: flex;
+}
+.hp-x-cp {
+    width: 624px;
+    margin-left: 36px;
+}
+.hp-logos {
+    display: flex;
+    align-content: center;
+    justify-self: center;
+    margin-top: 25px;
 }
 .hp-text {
     text-align: left;
+    width: 624px;
+    margin-left: 32px;
+    .text-with-icons {
+        margin-block: 25px 40px;
+    }
 }
-
 /* PLAY ON */
 .play-on {
     display: flex;
@@ -199,7 +293,7 @@ about-content {
 .footer {
     display: flex;
     align-items: center;
-    padding: 15px 16.6%;
+    padding: 15px var(--padding-inline);
 
     background-color: var(--light-col);
     justify-content: space-between;
