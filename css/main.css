@@ -147,13 +147,13 @@ about-content {
 }
 .about-text {
     text-align: left;
-    width: 1000px;
+    max-width: 1000px;
     margin-bottom: 70px;
     h1 {
         margin-bottom: 25px;
     }
     p {
-        width: 952px;
+        max-width: 952px;
         color: var(--gray-col)
     }
 }
@@ -200,22 +200,45 @@ about-content {
     display: flex;
 }
 .paw-form {
-    border: 2px solid var(--blue-col);
+    display: grid;
     width: 480px;
-    height: 383px;
+    min-height: 383px;
     margin-right: 32px;
     margin-top: 98px;
-    display: grid;
-    
+
+    color: var(--light-col);
+    row-gap: 35px;
+    text-align: left;
     .button {
         width: 192px;
         height: 59px;
-        
-    }
-    .filetaker {
-        background-color: transparent;
     }
 }
+.paw-input-el {
+    display: inherit;
+    height: 40px;
+}
+.filetaker {
+    background-color: transparent;
+}
+.email,
+.your-name {
+    border-bottom: 1px solid var(--gray-col);
+}
+.checkbox-row {
+    display: flex;
+    position: relative;
+    align-items: center;
+    label {
+        margin-left: 10px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+}
+.checkbox {
+    width: 14px;
+    height: 14px;
+} 
 .consoles {
     position: relative;
     margin-top: 25px;
