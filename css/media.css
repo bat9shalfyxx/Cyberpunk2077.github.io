@@ -1,5 +1,10 @@
-@media (max-width: 1900px) {
+@media (max-width: 1919px) {
     .about-small-img {
         flex-direction: row !important;
+    }
+}
+@media (max-width: 1025px) {
+    :root {
+        --padding-inline: 3.52vw !important;
     }
 }

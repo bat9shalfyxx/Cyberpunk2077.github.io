@@ -1,0 +1,35 @@
+/* About */
+.about {
+    background-color: white;
+    padding: var(--padding-block) var(--padding-inline);
+}
+about-content {
+    text-align: left;
+}
+.about-text {
+    text-align: left;
+    max-width: 1000px;
+    margin-bottom: 70px;
+    h1 {
+        margin-bottom: 25px;
+    }
+    p {
+        max-width: 952px;
+        color: var(--gray-col)
+    }
+}
+.about-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.about-small-img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.about-big-img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,5 +1,11 @@
-@import url(reset.css);
+@import url(reset.css); 
 @import url(media.css);
+@import url(./components/About.css);
+@import url(./components/Footer.css);
+@import url(./components/Header.css);
+@import url(./components/HP.css);
+@import url(./components/PAW.css);
+@import url(./components/PlayOn.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @font-face {
     font-family: Archangel;
@@ -7,12 +13,14 @@
     font-weight: 400;
 }
 :root {
-    --padding-inline: 16.6%;
+    /* --padding-inline: 16.6%; */
+    --padding-inline: 16.6vw;
     --padding-block: 70px;
+
+    --yellow-col: #F8F200;
     --light-col: #FFF;
     --dark-col: #000;
-    --gray-col: #777777;
-    --yellow-col: #F8F200;
+    --gray-col: #777;
     --blue-col: #52BEDC;
 }
 body {
@@ -23,7 +31,6 @@ body {
 .container {
     text-align: center;
     max-width: 1920px; 
-    width: 100%;
     margin: 0 auto;
 }
 .header,
@@ -81,250 +88,27 @@ h1 {
     font-size: 62px;
     color: var(--dark-col);
 }
+h3 {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 300; 
+    line-height: 21px;
+}
 h4 {
     font-family: Roboto, sans-serif;
     color: var(--blue-col);
     font-weight: 700;
     font-size: 24px;
 }
+h6 {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--light-col);
+}
 p {
     font-family: Roboto, serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 2;
-}
-/* Header */
-.header {
-    position: relative;
-    background-image: url(../img/screens/main_bg1.jpg);
-    padding: 20px var(--padding-inline) 0;
-    height: 1000px;
-}
-.header-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 537px;
-}
-.header-nav-list {
-    align-items: start; 
-    display: flex;
-    column-gap: 40px;
-    margin: 15px 0; 
-
-}
-.header-content {
-    position: absolute;
-    background-color: var(--yellow-col);
-    text-align: left;
-
-    width: 625px;
-    height: 370px;
-    padding: 70px;
-    bottom: 0;
-    right: var(--padding-inline);
-    /* clip-path: polygon(0 0, 100% 0, 0 100%, 100% 100%, 0 100%, 100% 0); */
-
-    h1 {
-        margin-bottom: 25px;
-    }
-}
-.header-button {
-    padding: 19px 50px;
-    color: var(--yellow-col);
-    font-size: 22px;
-    font-family: Roboto, serif;
-    background-color: var(--dark-col);
-}
-/* About */
-.about {
-    background-color: white;
-    padding: var(--padding-block) var(--padding-inline);
-    /* height: 850px; */
-}
-about-content {
-    text-align: left;
-}
-.about-text {
-    text-align: left;
-    max-width: 1000px;
-    margin-bottom: 70px;
-    h1 {
-        margin-bottom: 25px;
-    }
-    p {
-        max-width: 952px;
-        color: var(--gray-col)
-    }
-}
-.about-img-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    text-align: left;
-}
-.about-small-img {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 32px;
-}
-
-/* PLAY AND WIN */
-.play-and-win {
-    position: relative;
-    padding: 15px var(--padding-inline) var(--padding-block);
-}
-.paw-text {
-    text-align: left;
-    max-width: 952px;
-    p{
-        color: var(--light-col);
-    }
-    h1 {
-        color: var(--light-col);
-    }
-}
-.paw-text-fr {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-    img {
-        margin-right: 32px;
-    }
-    h1 {
-        margin-top: 29px;
-    }
-}
-.paw-content {
-    display: flex;
-}
-.paw-form {
-    display: grid;
-    width: 480px;
-    min-height: 383px;
-    margin-right: 32px;
-    margin-top: 98px;
-
-    color: var(--light-col);
-    row-gap: 35px;
-    text-align: left;
-    .button {
-        width: 192px;
-        height: 59px;
-    }
-}
-.paw-input-el {
-    display: inherit;
-    height: 40px;
-}
-.filetaker {
-    background-color: transparent;
-}
-.email,
-.your-name {
-    border-bottom: 1px solid var(--gray-col);
-}
-.checkbox-row {
-    display: flex;
-    position: relative;
-    align-items: center;
-    label {
-        margin-left: 10px;
-        font-size: 12px;
-        font-weight: 300;
-    }
-}
-.checkbox {
-    width: 14px;
-    height: 14px;
-} 
-.consoles {
-    position: relative;
-    margin-top: 25px;
-    width: 790px;
-}
-.z_yellow {
-    position: absolute;
-    left: 0;
-    z-index: -1;
-}
-.Xbox {
-    position: absolute;
-    margin-top: 25px;
-    left: 164px;
-}
-.z_blue {
-    position: absolute;
-    right: 0;
-    z-index: -1;
-}
-.playstation {
-    position: absolute;
-    margin-top: 25px;
-    right: 0;
-}
-/* HP */
-.hp {
-    background-color: var(--yellow-col);
-    display: flex;
-    padding: var(--padding-block) var(--padding-inline);
-    min-height: 675px;
-}   
-.hp-content {
-    display: flex;
-}
-.hp-x-cp {
-    width: 624px;
-    margin-left: 36px;
-}
-.hp-logos {
-    display: flex;
-    align-content: center;
-    justify-self: center;
-    margin-top: 25px;
-}
-.hp-text {
-    text-align: left;
-    width: 624px;
-    margin-left: 32px;
-    .text-with-icons {
-        margin-block: 25px 40px;
-    }
-}
-/* PLAY ON */
-.play-on {
-    display: flex;
-    h1 {
-        color: var(--light-col);
-    }
-}
-.disks-bg {
-    margin-right: 32px;
-}
-.play-on-content {
-    text-align: left;
-    margin: 70px 0;
-    .text-with-icons {
-        p {
-            color: var(--light-col);
-        }
-    }
-}
-
-/* FOOTER */
-.footer {
-    display: flex;
-    align-items: center;
-    padding: 15px var(--padding-inline);
-
-    background-color: var(--light-col);
-    justify-content: space-between;
-}
-.footer-logos {
-    column-gap: 32px;
-}
-.footer-and-some-text {
-    display: flex;
-    column-gap: 32px;
 }

@@ -1,0 +1,27 @@
+/* FOOTER */
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 15px var(--padding-inline);
+
+    background-color: var(--light-col);
+    justify-content: space-between;
+}
+.footer-logos {
+    display: flex;
+    column-gap: 32px;
+}
+.footer-and-some-text {
+    display: flex;
+    column-gap: 32px;
+}
+.footer-bottom {
+    background-color: var(--dark-col);
+}
+.footer-bottom {
+    background-color: var(--dark-col);
+    color: var(--light-col);
+
+    padding: 15px;
+    text-align: center;
+}

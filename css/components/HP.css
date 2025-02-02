@@ -1,0 +1,28 @@
+/* HP */
+.hp {
+    background-color: var(--yellow-col);
+    display: flex;
+    padding: var(--padding-block) var(--padding-inline);
+    min-height: 675px;
+}   
+.hp-content {
+    display: flex;
+}
+.hp-x-cp {
+    width: 624px;
+    margin-left: 36px;
+}
+.hp-logos {
+    display: flex;
+    align-content: center;
+    justify-self: center;
+    margin-top: 25px;
+}
+.hp-text {
+    text-align: left;
+    width: 624px;
+    margin-left: 32px;
+    .text-with-icons {
+        margin-block: 25px 40px;
+    }
+}

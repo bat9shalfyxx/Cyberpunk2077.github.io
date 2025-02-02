@@ -1,0 +1,19 @@
+/* PLAY ON */
+.play-on {
+    display: flex;
+    h1 {
+        color: var(--light-col);
+    }
+}
+.disks-bg {
+    margin-right: 32px;
+}
+.play-on-content {
+    text-align: left;
+    margin: 70px 0;
+    .text-with-icons {
+        p {
+            color: var(--light-col);
+        }
+    }
+}

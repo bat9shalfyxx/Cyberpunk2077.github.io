@@ -63,18 +63,27 @@
                             <label for="email">Твой e-mail</label>
                             <input class="email" type="email" id="email" required>
                         </div>
-                        <input class="filetaker" type="file">
+                        <div class="filetaker-container">
+                            <label for="filetaker" class="filetaker-label">
+                                <h3>Прикрепить скриншот</h3><br><h6>.png / .jpg / .pdf</h6>
+                            </label>
+                            <input class="filetaker" id="filetaker" type="file" accept=".png, .jpg, .jpeg, .pdf">
+                        </div>
                         <input class="button rev-col-button" type="submit" value="Отправить">
                         <div class="checkbox-row">
                             <input class="checkbox" type="checkbox" id="checkbox" required>
-                            <label for="checkbox">Согласен на обработку персональных данных</label>
+                            <label for="checkbox"><h6>Согласен на обработку персональных данных</h6></label>
                         </div>
                     </form>
                 <div class="consoles">
-                    <img class="z_yellow" src="./img/other/z_yellow.png" alt="z" loading="lazy">
-                    <img class="Xbox" src="./img/other/xbox.png" alt="Xbox" loading="lazy">
-                    <img class="z_blue" src="./img/other/z_blue.png" alt="z" loading="lazy">
-                    <img class="playstation" src="./img/other/playstation.png" alt="PlayStation" loading="lazy">
+                    <div class="consoles-el">
+                        <img class="z_yellow" src="./img/other/z_yellow.png" alt="z" loading="lazy">
+                        <img class="Xbox" src="./img/other/xbox.png" alt="Xbox" loading="lazy">
+                    </div>
+                    <div class="consoles-el">
+                        <img class="z_blue" src="./img/other/z_blue.png" alt="z" loading="lazy">
+                        <img class="playstation" src="./img/other/playstation.png" alt="PlayStation" loading="lazy">
+                    </div>
                 </div>
             </div>
         </section>
@@ -141,6 +150,9 @@
                 <a href="#!"><p>Политика конфиденциальности</p></a>
             </div>
         </footer>
+        <div class="footer-bottom">
+            <h6>CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®</h6>
+        </div>
     </div>
 </body>
 </html>
