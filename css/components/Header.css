@@ -1,7 +1,7 @@
 /* Header */
 .header {
     position: relative;
-    background-image: url(/Cyberpunk2077/img/screens/main_bg1.jpg);
+    background-image: url(../../img/screens/main_bg1.jpg);
     padding: 20px var(--padding-inline) 0;
     height: 1000px;
 }
